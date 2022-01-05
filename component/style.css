@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	--bright-yellow: hsl(71, 65%, 48%);
+	--cyan: hsl(179, 61%, 35%);
+	--cocoa: hsl(60, 20%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+	--light-cyan: hsla(179, 62%, 43%, 0.8);
+	--light-gray: hsl(204, 43%, 93%);
+	--yellowish: hsl(71, 62%, 52%);
+	--white: hsl(0, 0%, 100%);
+	font-size: 16px;
+	font-family: 'Karla';
+}
+
+body {
+	background: var(--white);
+	color: var(--light-gray);
+	font-weight: 400;
+	min-height: 100vh;
+	min-width: 375px;
+	max-width: 1440px;
+	position: relative;
+	text-align: left;
+}
+
+main {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 600px;
+	width: 700px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 6em;
+	text-align: left;
+	box-shadow: 0px 10px 20px 0px #86858575;
+	display: grid;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:"h h"
+						"r l"
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	max-width: 660px;
+	margin: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0px 10px 20px 0px #aaaaaa75;
+}
+
+.header {
+	grid-area: h;
+	background-color: var(--cocoa);
+	padding: 20px;
+}
+
+.h1-header {
+	color: var(--cyan);
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.p-header {
+	color: var(--bright-yellow);
+}
+
+.subtitle-header {
+	color: var(--grayish-blue);
+}
+
+.subtitle--large {
+	font-weight: 700;
+	font-size: 1.13rem;
+}
+
+.right {
+	grid-area: r;
+	background-color: var(--cyan);
+	padding: 50px;
+}
+
+.price {
+	color: #e5eff5;
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.yelloyish {
+	color: var(--yellowish);
+}
+
+.btn {
+	background-color: var(--bright-yellow);
+	display: inline-block;
+	width: 100%;
+	padding: 1em;
+	border-color: #cde65f;
+	border-radius: 0.3em;
+	box-shadow: 0 10px 20px rgb(0 0 0 / 0.2);
+	text-align: center;
+	color: var(--white);
+}
+
+.btn:hover {
+	background-color: var(--yellowish);
+	cursor: pointer;
+}
+
+.left {
+	grid-area: l;
+	background-color: var(--light-cyan);
+	padding: 50px;
+}
+
+li {
+	list-style: none;
+	font-size: 0.9rem;
+	margin-right: auto;
+	line-height: 1.4rem;
+}
+
+@media (max-width: 800px) {
+	main {
+	height: fit-content;
+	margin-top: 5vh;
+	width: 95%;
+	}
+
+	.section {
+	height: fit-content;
+	padding: 1rem 2rem;
+	}
+
+	.section__2, .section__3 {
+	width: 100%;
+	}
+}
