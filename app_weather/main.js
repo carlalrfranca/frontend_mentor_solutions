@@ -51,9 +51,3 @@ function dateBuilder (d) {
 
 	return `${day} ${date} ${month} ${year}`;
 }
-
-/* https://www.youtube.com/watch?v=n4dtwWgRueI
-Promise (than .catch)
-	fetch
-callBack
-*/
